@@ -3,41 +3,16 @@ $(window).load(function() {
 
 	"use strict";
 
-//------------------------------------------------------------------------
-//						PRELOADER SCRIPT
-//------------------------------------------------------------------------
-    $('#preloader').delay(400).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('#preloader .loading-data').fadeOut(); // will first fade out the loading animation
 
-
-//------------------------------------------------------------------------
-//						NORMALIZE CAROUSEL HEIGHTS
-//------------------------------------------------------------------------
-    $('#carousel-full-header .item').carouselHeights();
-    $('#carousel-testimonials .item').carouselHeights();
-    
-
+	
 //------------------------------------------------------------------------
 //						COUNTER SCRIPT
 //------------------------------------------------------------------------
-    $('.timer').counterUp({
-        delay: 20,
-        time: 2500
-    });
-
-
-//------------------------------------------------------------------------
-//						COUNTDOWN OPTIONS SCRIPT
-//------------------------------------------------------------------------    
-    if($('div').is('.countdown')){         
-        $('.countdown').jCounter({
-            date: "14 february 2016 12:00:00", // Deadline date
-            timezone: "Europe/Bucharest",
-            format: "dd:hh:mm:ss",
-            twoDigits: 'on',
-            fallback: function() {console.log("count finished!")}
+   $('.timer').counterUp({
+            delay: 20,
+            time: 2500
         });
-    }
+
 
 
 //------------------------------------------------------------------------
@@ -53,7 +28,6 @@ $(window).load(function() {
 			$(".navbar-slide .navbar-toggle").addClass("collapsed");
         }
     });
-
 	
 //------------------------------------------------------------------------
 //						NAVBAR HIDE ON CLICK (COLLAPSED) SCRIPT
@@ -83,29 +57,17 @@ $(document).ready(function(){
 
 
 
-//------------------------------------------------------------------------
-//						FULL HEIGHT SECTION SCRIPT
-//------------------------------------------------------------------------
-	$(".screen-height").css("min-height",$( window ).height());
-	$( window ).resize(function() {
-		$(".screen-height").css("min-height",$( window ).height());
-	});
-
-
-
-
 //------------------------------------------------------------------------	
 //                    MAGNIFIC POPUP(LIGHTBOX) SETTINGS
 //------------------------------------------------------------------------  
 	          
-
-	$('.portfolio-list li').magnificPopup({
-		delegate: 'a:not(.btn, .link-item)',
-		type: 'image',
-		gallery: {
-			enabled: true
-		}
-	});
+    $('.portfolio-list li').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
 
 	
 
@@ -132,14 +94,6 @@ if($('.video-bg')[0]) {
 	});	
 }
 
-
-
-
-//------------------------------------------------------------------------------------------
-//                     INITIALIZATION WOW.JS
-//------------------------------------------------------------------------------------------
-    var wow = new WOW();
-    wow.init();
 
 		
 	
@@ -214,87 +168,9 @@ if($('.video-bg')[0]) {
         }
         return false; 
     });
-	
-	
-	
 	  
-//------------------------------------------------------------------------
-//					SUBSCRIBE 2 FIELDS FORM VALIDATION'S SETTINGS
-//------------------------------------------------------------------------          
-    $('#subscribe_form_2').validate({
-        onfocusout: false,
-        onkeyup: false,
-        rules: {
-			name: "required",
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        errorPlacement: function(error, element) {
-            error.appendTo( element.closest(".validation-message"));
-        },
-        messages: {
-			name: "What's your name?",
-            email: {
-                required: "We need your email address to contact you.",
-                email: "Please, enter a valid email"
-            }
-        },
-					
-        highlight: function(element) {
-            $(element)
-        },                    
-					
-        success: function(element) {
-            element
-            .text('').addClass('valid')
-        }
-    }); 
-	
-
-		
-				
-//------------------------------------------------------------------------------------
-//						SUBSCRIBE 2 FIELDS FORM MAILCHIMP INTEGRATIONS SCRIPT
-//------------------------------------------------------------------------------------		
-    $('#subscribe_form_2').submit(function() {
-        $('.error').hide();
-        $('.error').fadeIn();
-        // submit the form
-        if($(this).valid()){
-            $('#subscribe_submit_2').button('loading'); 
-            var action = $(this).attr('action');
-            $.ajax({
-                url: action,
-                type: 'POST',
-                data: {
-                    newsletter_email: $('#subscribe_email_2').val(),
-					newsletter_name: $('#subscribe_name_2').val()
-                },
-                success: function(data) {
-                    $('#subscribe_submit_2').button('reset');
-					
-					//Use modal popups to display messages
-					$('#modalMessage .modal-title').html('<i class="icon icon-envelope-open"></i>' + data);
-					$('#modalMessage').modal('show');
-					
-                },
-                error: function() {
-                    $('#subscribe_submit').button('reset');
-					
-					//Use modal popups to display messages
-					$('#modalMessage .modal-title').html('<i class="icon icon-ban"></i>Oops!<br>Something went wrong!');
-					$('#modalMessage').modal('show');
-					
-                }
-            });
-        }
-        return false; 
-    });
-	
-	
-		  
+	  
+	  
 	  
 //------------------------------------------------------------------------------------
 //						CONTACT FORM VALIDATION'S SETTINGS
@@ -374,43 +250,6 @@ if($('.video-bg')[0]) {
             $('#contact_submit').button('reset')
         }
         return false; 
-    });	    	  	
-	
+    });	    	  
+
 });
-
-
-//------------------------------------------------------------------------
-//						NORMALIZE CAROUSEL HEIGHTS FUNCTION
-//------------------------------------------------------------------------
-
-$.fn.carouselHeights = function() {
-
-    var items = $(this), //grab all slides
-        heights = [], //create empty array to store height values
-        tallest; //create variable to make note of the tallest slide
-    
-    var normalizeHeights = function() {
-    
-        items.each(function() { //add heights to array
-            heights.push($(this).height()); 
-        });
-        tallest = Math.max.apply(null, heights); //cache largest value
-        items.each(function() {
-            $(this).css('min-height',tallest + 'px');
-        });
-    };
-    
-    normalizeHeights();
-    
-    $(window).on('resize orientationchange', function () {
-        //reset vars
-        tallest = 0;
-        heights.length = 0;
-    
-        items.each(function() {
-            $(this).css('min-height','0'); //reset min-height
-        }); 
-        normalizeHeights(); //run it again 
-    });
-
-};
