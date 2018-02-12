@@ -643,7 +643,7 @@ h4.sub-title {
 	font-size: 45px;
 	font-weight: 100;
 	text-transform: uppercase;
-	margin-bottom: 70px;
+	/*margin-bottom: 70px;*/
 }
 
 .giant-title {
@@ -1431,7 +1431,7 @@ nav.navbar .container {
 }
 
 .intro-block .slogan p {
-	margin: 50px 0 0 0;
+	margin: 30px 0 0 0;
 	opacity: 0.7;
 }
 
