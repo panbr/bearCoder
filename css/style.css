@@ -1471,6 +1471,7 @@ nav.navbar .container {
 	position:absolute;
 	left:0;
 	bottom:0;
+	min-height: 165px;
 }
 .types-block .content p{
 	margin:0;
