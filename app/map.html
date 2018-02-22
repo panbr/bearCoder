@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>广州小学分布</title>
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicons/favicon.png">
+    <script src="lib/jquery-1.11.2.min.js"></script> 
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=lCaiTvpNEnMzEVkP0GFO2jladv0EpOfU"></script>
+    <style>
+        body, html{width: 100%;padding:0;margin:0;font-family:"微软雅黑";}
+        #l-map{height:600px;width:100%;}
+        #r-result{width:100%; font-size:14px;line-height:20px;}
+        header {text-align: center;}
+    </style>
+</head>
+<body>
+    <header>
+        <h3>广州市小学分布图</h3>
+    </header>
+    <div id="l-map"></div>
+    <div id="r-result">
+        <div id="result"></div>
+    </div>
+
+<script type="text/javascript" src="scripts/map.js"></script>
+</body>
+</html>
