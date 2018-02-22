@@ -17,6 +17,7 @@ class Index {
 
             // 提交
             $.post("/api/application", this.formData, function(data, status, xhr) {
+                alert('提交成功，谢谢！');
                 console.log('res: ', data)
             })
         })

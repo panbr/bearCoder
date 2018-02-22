@@ -1,5 +1,5 @@
-# school_map
-Guangzhou primary school map
+# run2code.com
+广州逆风科技有限公司
 
 #### 安装依赖
 
@@ -13,6 +13,6 @@ $ npm install
 $ node serve.js
 ```
 
-#### 数据爬虫
+#### 数据脚本
 
 ./spider 文件夹下
