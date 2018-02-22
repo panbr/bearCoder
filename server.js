@@ -7,7 +7,6 @@
 var express = require('express');
 var sqlite3 = require('sqlite3').verbose();
 var path = require('path');
-var fs = require('fs');
 var bodyParser = require('body-parser');
 var router = require('./routes/');
 var config = require('./config');
