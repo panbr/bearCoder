@@ -43,5 +43,5 @@ app.use(router);
 
 // Start Server
 app.listen(config.SERVE_PORT, function(req, res) {
-    console.log("app is running at http://127.0.0.1:", config.SERVE_PORT);
+    console.log(`App is running at http://127.0.0.1:${config.SERVE_PORT}`);
 })
