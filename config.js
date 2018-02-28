@@ -8,5 +8,5 @@ module.exports = {
     APP_PATH  : path.join(BASE_PATH, 'app'),        // 应用地址
 
     // 服务端口
-    SERVE_PORT: process.env.PORT || 8080,
+    SERVE_PORT: process.env.PORT || 3000,
 }
