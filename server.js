@@ -18,7 +18,7 @@ var db = new sqlite3.Database(__dirname+'/db/school.db');
 // log
 var log4js = require('./logger');
 var logger = log4js.getLogger();
-log4js.useLogger(app, logger);
+// log4js.useLogger(app, logger); // 先不用记录日志
 
 // Configuration
 app.use(express.static(path.join(__dirname, 'app')));
