@@ -1,6 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Hind:600,300);
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300);
 
+@font-face {
+	font-family: 'aircut';
+	src: url('../fonts/AIRCUT.TTF');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*----------------------------------------------------------------------------------------
 						FONT (OPEN SANS) IMPORT FROM GOOGLE FONTS 
 -----------------------------------------------------------------------------------------*/
@@ -9,7 +16,7 @@
 -----------------------------------------------------------------------------------------*/
 
 body {
-	font-family: 'Hind', sans-serif;
+	font-family: Helvetica,Arial,"PingFang SC","Hiragino Sans GB","Source Han Sans CN",Roboto,"Microsoft Yahei",sans-serif;
 	font-size: 17px;
 	font-weight: lighter;
 	line-height: 1.5;
@@ -2630,6 +2637,7 @@ ul.posts-line .post .title {
 /* custom style */
 .logo {
 	font-size: 24px;
+	font-family: 'aircut', STXihei, SimHei, sans-serif;
 }
 
 
