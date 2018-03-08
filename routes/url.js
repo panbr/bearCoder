@@ -18,3 +18,8 @@ exports.map = function(req, res){
 exports.applyList = function(req, res) {
     res.sendFile(config.APP_PATH + '/applyList.html')
 }
+
+// 在线编码器
+exports.coding = function(req, res) {
+    res.sendFile(config.APP_PATH + '/coding.html')
+}

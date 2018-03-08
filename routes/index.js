@@ -11,6 +11,7 @@ var router = express.Router();
 router.get('/', url.index)
 router.get('/map', url.map)
 router.get('/applyList', url.applyList)
+router.get('/coding', url.coding)
 
 /// API
 router.get('/api/schoolList', api.schoolList)
