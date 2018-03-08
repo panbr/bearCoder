@@ -2640,4 +2640,18 @@ ul.posts-line .post .title {
 	font-family: 'aircut', STXihei, SimHei, sans-serif;
 }
 
+.code-editor, .code-result {
+	width: 100%;
+	min-height: 480px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px;
+	background: #fff;
+}
+
+.code-run {
+	margin-top: 200px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
 
