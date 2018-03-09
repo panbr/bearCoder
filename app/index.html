@@ -222,6 +222,49 @@
 		</div>
 	</section>
 
+	<!-- CODING EDITOR -->
+	<section id="coding-editor" class="bg-color3 text-center cover-bg no-sep" style="background-image: url(images/bg/bg46.jpg);">
+		<div class="container">
+			<h2 class="title">云上编码</h2>
+			<hr class="sep-bottom">
+			<div class="row sep-bottom">
+                <div class="col-sm-5">
+                    <div class="code-editor">
+<textarea id="code">
+# -*- coding: utf-8 -*-
+
+import turtle
+import random
+
+t = turtle.Turtle()
+t.speed(0)
+colors = ['red', 'blue', 'black', 'yellow']
+for i in range(75):
+    for j in range(5):
+        t.color(random.choice(colors))
+        t.left(144)
+        t.forward(160)
+    t.left(5)
+turtle.done()
+</textarea>
+                    </div>
+                </div>
+                <div class="col-sm-2 text-center">
+                    <button id="run" class="btn btn-sm btn-primary code-run">RUN</button><br><br>
+                    <h4 class="sub-title">Ctrl + Enter</h4>
+                </div>
+                <div class="col-sm-5">
+                    <div class="code-result">
+                        <pre id="output">code result...</pre>
+                        <div id="mycanvas"></div>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+	</section>
+
+
 	<!-- MAP HALF BLOCK -->
 	<section id="contact-half" class="bg-color1 cover-bg" style="background-image: url(images/bg-map.jpg);">
 		<div class="container">
@@ -305,6 +348,8 @@
 <script src="http://p4uq8ym5z.bkt.clouddn.com/waypoints.min.js"></script> 
 <script src="http://p4uq8ym5z.bkt.clouddn.com/video.js"></script> 
 <script src="http://p4uq8ym5z.bkt.clouddn.com/bigvideo.js"></script> 
+<script src="http://p4uq8ym5z.bkt.clouddn.com/skulpt.min.js"></script>
+<script src="http://p4uq8ym5z.bkt.clouddn.com/skulpt-stdlib.js"></script>
 <script src="lib/custom.js"></script>
 
 <!-- Custom -->
