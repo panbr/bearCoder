@@ -53,7 +53,8 @@
             <hr class="sep-bottom">
             <div class="row sep-bottom">
                 <div class="col-sm-5">
-<textarea id="code" class="code-editor">
+                    <div class="code-editor">
+<textarea id="code">
 import turtle
 t=turtle.Turtle()
 s=turtle.Screen()
@@ -67,6 +68,7 @@ for x in range(100):
     t.left(360/sides+1)
     t.width(x*sides/200)
 </textarea>
+                    </div>
                 </div>
                 <div class="col-sm-2 text-center">
                     <button id="run" class="btn btn-sm btn-primary code-run">run</button>

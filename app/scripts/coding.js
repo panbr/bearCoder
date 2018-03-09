@@ -13,7 +13,7 @@ class Coding {
     }
 
     _run() {
-        let prog = $("#code").val();
+        let prog = $("#code").html();
         let mypre = document.getElementById("output");
         mypre.innerHTML = '';
         Sk.pre = "output";
