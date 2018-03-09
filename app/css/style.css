@@ -627,6 +627,9 @@ a.read-more:hover {
 .title {
 	margin: 0 0 60px 0;
 }
+.title2 {
+	margin: 0 0 40px 0;
+}
 
 h3.title,
 h4.title {
@@ -2650,7 +2653,7 @@ ul.posts-line .post .title {
 }
 
 .code-run {
-	margin-top: 200px;
+	margin-top: 180px;
 	padding-left: 30px;
 	padding-right: 30px;
 }

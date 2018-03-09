@@ -9,7 +9,14 @@ class Coding {
     _init() {
         $('#run').click(() => {
             this._run();
-        })
+        });
+
+        // ctrl + Enter
+        $(document).keyup(event => { 
+            if(event.ctrlKey && event.keyCode === 13) { 
+                this._run();
+            } 
+        });
     }
 
     _run() {
