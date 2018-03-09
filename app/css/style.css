@@ -2655,3 +2655,8 @@ ul.posts-line .post .title {
 	padding-right: 30px;
 }
 
+.code-result pre {
+	text-align: left;
+	min-height: 40px;
+}
+

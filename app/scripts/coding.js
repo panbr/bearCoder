@@ -14,14 +14,19 @@ class Coding {
 
     _run() {
         let prog = $("#code").val();
-        (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'result';
-        Sk.configure({ read: this._builtinRead });
+        let mypre = document.getElementById("output");
+        mypre.innerHTML = '';
+        Sk.pre = "output";
+        (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+        Sk.configure({ output: this._outf, read: this._builtinRead });
+
         let mp = Sk.misceval.asyncToPromise(function() {
             return Sk.importMainWithBody("<stdin>", false, prog, true);
         });
         mp.then((mod) => {
             console.log('success');
         }, (err) => {
+            mypre.innerHTML = err.toString();
             console.error(err.toString());
         });
     }
@@ -31,6 +36,11 @@ class Coding {
             throw "File not found: '" + x + "'";
         }
         return Sk.builtinFiles["files"][x];
+    }
+
+    _outf(text) { 
+        let mypre = document.getElementById("output"); 
+        mypre.innerHTML = mypre.innerHTML + text; 
     }
 }
 
