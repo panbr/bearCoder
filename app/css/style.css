@@ -2665,7 +2665,7 @@ ul.posts-line .post .title {
 	height: 100%;
 	min-height: 450px;
     padding: 9.5px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.42857143;
     word-break: break-all;
     word-wrap: break-word;
@@ -2674,11 +2674,13 @@ ul.posts-line .post .title {
     border: 1px solid #cccccc;
     border-radius: 4px;
     overflow: auto;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .code-result pre {
 	text-align: left;
 	min-height: 40px;
+	font-size: 14px;
 	word-break: break-all;
     word-wrap: break-word;
 }
