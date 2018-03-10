@@ -124,7 +124,7 @@
 			<div class="row no-dev">
 				<div class="col-sm-6 col-sm-offset-3 sep-bottom">
 					<h2 class="title">闰土编程</h2>
-					<p>STEAM 教育发展的实践者，主要致力于教授 6 ~ 18 岁青少年趣味计算机编程、硬件开发，创意项目制作等，旨在帮助孩子们提升逻辑思维、动手探索、创新与创造能力。</p>
+					<p>STEAM 教育发展的实践者，主要致力于教授 6 ~ 18 岁青少年趣味计算机编程、软硬件开发，创意项目制作等，旨在帮助孩子们提升逻辑思维、动手探索、创新与创造能力。</p>
 				</div>
 				<div class="col-sm-12"> <img src="images/center-block-bg2.png" class="screen" alt="screen"> </div>
 			</div>
@@ -165,54 +165,59 @@
 	</section>
 	
 	<!-- TABLE HALF BLOCK -->
-	<section id="table-half" class="bg-color3">
+	<section id="content-center-2" class="text-center bg-color3">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<h2>课程体系</h2>
-					<h4 class="sub-title">Course System</h4>
-					<p class="sep-bottom desc-text" data-selector="Footer">课程设计参考 K12 科学教育框架，符合中国中小学生课程特点。</p>
+			<div class="row no-dev">
+				<div class="col-sm-6 col-sm-offset-3 sep-bottom">
+					<h2 class="title">课程体系</h2>
+					<h4 class="sub-title">参考 K12 科学教育框架，符合中国中小学生课程特点。</h4>
 				</div>
-				<div class="col-md-8 col-md-offset-1">
+				<div class="col-sm-12">
 					<div class="table-responsive">
-						<table class="table table-hover table-striped">
+						<table class="table table-hover table-striped table-left">
 							<thead>
 								<tr>
-									<th width="10%">分级</th>
 									<th width="15%">课程</th>
-									<th>学习内容</th>
+									<th width="15%">分级</th>
+									<th>教学内容</th>
 									<th>知识重点</th>
 									<th width="10%">课时</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>L1</td>
-									<td>图形编程</td>
-									<td>用简单的图形化编程方式，结合智能硬件，制作创客项目。</td>
+									<td rowspan="2"><strong>micro:bit 课程</strong></td>
+									<td>Level 1</td>
+									<td>用简单的图形化编程方式，结合智能硬件，完成创客项目。</td>
 									<td>了解图形编程的方法，认识智能硬件设备的功能，学习如何将软硬件结合。</td>
-									<td>32</td>
+									<td>24</td>
 								</tr>
 								<tr>
-									<td>L2</td>
-									<td>Python 编程</td>
-									<td>编写简单的代码片段，控制智能硬件，制作具有交互功能的创客项目。</td>
-									<td>python 代码入门，了解变量、循环、条件及逻辑等概念，熟悉智能硬件的复杂功能。</td>
-									<td>32</td>
+									<td>Level 2</td>
+									<td>综合运用编程技能，控制智能硬件，完成具有交互功能的创客项目。</td>
+									<td>熟悉程序中的变量、循环、条件判断及函数等概念，并能将其运用到硬件的控制中。</td>
+									<td>24</td>
 								</tr>
 								<tr>
-									<td>L3</td>
-									<td>Turtle 画图</td>
-									<td>...</td>
-									<td>...</td>
-									<td>...</td>
+									<td rowspan="2"><strong>Python 课程</strong></td>
+									<td>Level 1</td>
+									<td>结合 python 语言，掌握编程的基础知识，编写功能丰富的小程序。</td>
+									<td>掌握程序设计的基本思想，熟悉语法及程序中的流程控制。</td>
+									<td>24</td>
 								</tr>
 								<tr>
-									<td>L4</td>
-									<td>AI 人工智能</td>
-									<td>...</td>
-									<td>...</td>
-									<td>...</td>
+									<td>Level 2</td>
+									<td>综合运用 python 语言及其扩展模块，编写功能完善且应用型强的小程序。</td>
+									<td>熟悉程序中的函数及模块，并熟练使用 python 丰富的扩展库。</td>
+									<td>24</td>
+								</tr>
+								<tr>
+									<td><strong>树莓派课程</strong></td>
+									<td colspan="4" class="text-center">该课程仍在开发中，敬请期待...</td>
+								</tr>
+								<tr>
+									<td><strong>AI 人工智能</strong></td>
+									<td colspan="4" class="text-center">该课程仍在开发中，敬请期待...</td>
 								</tr>
 							</tbody>
 						</table>
@@ -240,7 +245,7 @@ import random
 t = turtle.Turtle()
 t.speed(0)
 colors = ['red', 'blue', 'yellow']
-for i in range(75):
+for i in range(72):
     for j in range(5):
         t.color(random.choice(colors))
         t.left(144)

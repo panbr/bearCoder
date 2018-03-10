@@ -2688,3 +2688,7 @@ ul.posts-line .post .title {
     word-wrap: break-word;
 }
 
+.table-left {
+	text-align: left;
+}
+
