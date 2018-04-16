@@ -14,7 +14,10 @@ class Map {
         var index = 0;
         var myGeo = new BMap.Geocoder();
 
-        $.get("/api/schoolList?pageIndex=0&pageNum=10", function(res){
+        var pageIndex = this._GetQueryString('pageIndex') || 0;
+        var pageNum = this._GetQueryString('pageNum') || 10;
+
+        $.get(`/api/schoolList?pageIndex=${pageIndex}&pageNum=${pageNum}`, function(res){
             console.log('res: ', res)
             let adds = [];
             if (res && res.data.length) {
@@ -29,6 +32,12 @@ class Map {
                 marker.setLabel(new BMap.Label(res.data[i].name, {offset:new BMap.Size(20,-10)}));
             }
         })
+    }
+
+    _GetQueryString(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null) return unescape(r[2]); return null;
     }
 }
 
