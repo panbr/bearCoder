@@ -23,3 +23,8 @@ exports.applyList = function(req, res) {
 exports.coding = function(req, res) {
     res.sendFile(config.APP_PATH + '/coding.html')
 }
+
+// 在线申请
+exports.apply = function(req, res) {
+    res.sendFile(config.APP_PATH + '/apply.html')
+}
