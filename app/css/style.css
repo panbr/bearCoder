@@ -376,8 +376,8 @@ button {
 	box-shadow: none;
 	color: #999;
 	margin-left: -4px;
-	height: 68px;
-	line-height: 68px;
+	/*height: 68px;
+	line-height: 68px;*/
 }
 
 textarea.form-control {
