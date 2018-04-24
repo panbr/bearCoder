@@ -12,12 +12,22 @@ class Index {
         $("#apply_submit").click( e => {
             e.preventDefault(); // 阻止默认行为
             this.formData = $("#contact_form").serializeArray();
+            this.formData.push({'name': 'remark', 'value': '留言'});
+
             // 验证
             if(!this._validate()) return;
 
             // 提交
             $.post("/api/application", this.formData, function(data, status, xhr) {
-                alert('提交成功，谢谢！');
+                notif({
+                    type: "warning",
+                    msg: "提交申请成功，我们将尽快给您安排课程！",
+                    position: "center",
+                    opacity: 0.8
+                });
+                setTimeout(() => {
+                    location.reload();
+                }, 3000);
                 console.log('res: ', data)
             })
         })

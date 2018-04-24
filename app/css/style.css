@@ -370,6 +370,14 @@ button {
 	color: inherit;
 }
 
+#contact_form .form-control.form-select {
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+	box-shadow: none;
+	color: #999;
+	margin-left: -4px;
+}
+
 textarea.form-control {
 	resize: none;
 }
@@ -2717,7 +2725,7 @@ ul.posts-line .post .title {
     animation: colorset 110s infinite linear;
 }
 
-.logo, .nav {
+.stage-bg-nav .logo, .stage-bg-nav .nav {
     -webkit-animation: colorset 110s infinite linear;
     -moz-animation: colorset 110s infinite linear;
     -o-animation: colorset 110s infinite linear;

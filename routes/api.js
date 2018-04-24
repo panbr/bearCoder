@@ -55,7 +55,7 @@ exports.application = function(req, res) {
                             NULL,
                             NULL,
                             datetime(CURRENT_TIMESTAMP,'localtime'),
-                            NULL
+                            '${req.body.remark}'
                         );`
     req.db.serialize(() => {
         req.db.run(SQL, (err) => {

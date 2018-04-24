@@ -12,6 +12,7 @@ router.get('/', url.index)
 router.get('/map', url.map)
 router.get('/applyList', url.applyList)
 router.get('/coding', url.coding)
+router.get('/apply', url.apply)
 
 /// API
 router.get('/api/schoolList', api.schoolList)
