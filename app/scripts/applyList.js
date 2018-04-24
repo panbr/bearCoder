@@ -15,6 +15,7 @@ class ApplyList {
                 let item = res.data[i];
                 let html = `<tr>
                                 <td>${index}</td>
+                                <td>${item.remark}</td>
                                 <td>${item.apply_name}</td>
                                 <td>${item.grade}</td>
                                 <td>${item.phone}</td>
