@@ -21,7 +21,7 @@ class Index {
             $.post("/api/application", this.formData, function(data, status, xhr) {
                 notif({
                     type: "warning",
-                    msg: "提交申请成功，我们将尽快给您安排课程！",
+                    msg: "提交成功，我们将尽快反馈您的信息！",
                     position: "center",
                     opacity: 0.8
                 });
