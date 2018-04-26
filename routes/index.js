@@ -18,6 +18,7 @@ router.get('/apply', url.apply)
 router.get('/api/schoolList', api.schoolList)
 router.post('/api/application', api.application)
 router.get('/api/applyList', api.applyList)
+router.get('/api/deleteApply', api.deleteApply)
 
 
 module.exports = router;

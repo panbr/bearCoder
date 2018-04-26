@@ -2,6 +2,22 @@
  * API 接口
  */
 
+function _successFun(res, rows) {
+    res.status(200).send({
+        status: 200,
+        message: 'Success',
+        data: rows,
+    })
+}
+
+function _errorFun(res, err) {
+    res.status(500).send({
+        status: 500,
+        message: 'Field',
+        data: err.toString(),
+    })
+}
+
 // 查询学校列表
 exports.schoolList = function(req, res) {
     let SQL = '';
@@ -16,17 +32,9 @@ exports.schoolList = function(req, res) {
         req.db.all(SQL, function(err, rows) {
             if (err) {
                 console.error(err);
-                res.status(500).send({
-                    status: 500,
-                    message: 'Field',
-                    data: err.toString(),
-                })
+                _errorFun(res, err);
             } else {
-                res.status(200).send({
-                    status: 200,
-                    message: 'Success',
-                    data: rows,
-                })
+                _successFun(res, rows);
             }
         })
     })
@@ -61,17 +69,9 @@ exports.application = function(req, res) {
         req.db.run(SQL, (err) => {
             if(err) {
                 console.error(err);
-                res.status(500).send({
-                    status: 500,
-                    message: 'Field',
-                    data: err.toString(),
-                })
+                _errorFun(res, err);
             } else {
-                res.status(200).send({
-                    status: 200,
-                    message: 'Success',
-                    data: null,
-                })
+                _successFun(res, req.body);
             }  
         })
     })
@@ -91,17 +91,31 @@ exports.applyList = function(req, res) {
         req.db.all(SQL, function(err, rows) {
             if (err) {
                 console.error(err);
-                res.status(500).send({
-                    status: 500,
-                    message: 'Field',
-                    data: err.toString(),
-                })
+                _errorFun(res, err);
             } else {
-                res.status(200).send({
-                    status: 200,
-                    message: 'Success',
-                    data: rows,
-                })
+                _successFun(res, rows);
+            }
+        })
+    })
+}
+
+// 删除申请记录
+exports.deleteApply = function(req, res) {
+    let SQL = '';
+    if(req.query.applyId) {
+        const applyId = req.query.applyId;
+        SQL = `DELETE FROM application WHERE apply_id=${applyId}`;
+    } else {
+        _errorFun(res, '入参为空！');
+        return null;
+    }
+    req.db.serialize(function() {
+        req.db.all(SQL, function(err, rows) {
+            if (err) {
+                console.error(err);
+                _errorFun(res, err);
+            } else {
+                _successFun(res, rows);
             }
         })
     })
