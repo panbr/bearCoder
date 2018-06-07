@@ -13,6 +13,7 @@
 <link href="http://p4uq8ym5z.bkt.clouddn.com/bootstrap.css" rel="stylesheet">
 <link href="http://p4uq8ym5z.bkt.clouddn.com/magnific-popup.css" rel="stylesheet">
 <link href="http://p4uq8ym5z.bkt.clouddn.com/notifIt.min.css" rel="stylesheet">
+<link href="http://p4uq8ym5z.bkt.clouddn.com/video-js.css" rel="stylesheet">
 
 <!-- Loading Font Styles -->
 <link href="./css/iconfont-style.css" rel="stylesheet">
@@ -137,14 +138,30 @@
 	</section>
 
 	<!-- CONTENT CENTER 2 BLOCK -->
-	<section id="content-center-2" class="text-center zero-bottom pattern-bg" style="background-image: url(images/pattern-bg2.png);">
-		<div class="container">
-			<div class="row no-dev">
-				<div class="col-sm-6 col-sm-offset-3 sep-bottom">
-					<h2 class="title">闰土编程</h2>
-					<p>STEAM 教育发展的实践者，主要致力于教授 6 ~ 18 岁青少年趣味计算机编程、软硬件开发，创意项目制作等，旨在帮助孩子们提升逻辑思维、动手探索、创新与创造能力。</p>
+
+	<section id="video-half-left" class="dark-bg bg-color2">
+		<div class="container">		
+			<div class="row">
+				<div class="col-md-5">
+					<h2>闰土编程</h2>
+					<h4 class="sub-title">更简单的青少儿编程教育</h4>
+					STEAM 教育发展的实践者，主要致力于教授 6 ~ 18 岁青少年趣味计算机编程、软硬件开发，创意项目制作等，旨在帮助孩子们提升逻辑思维、动手探索、创新与创造能力。
 				</div>
-				<div class="col-sm-12"> <img src="images/center-block-bg2.png" class="screen" alt="screen"> </div>
+				<div class="col-md-6 col-md-offset-1">
+					<div class="embed-responsive text-center">
+						<video
+						    id="my-player"
+						    class="video-js"
+						    width="480"
+						    height="240"
+						    controls
+						    preload="auto"
+						    poster="http://p4uq8ym5z.bkt.clouddn.com/kid-notebook-low.jpg"
+						    data-setup='{}'>
+						    <source src="http://p4uq8ym5z.bkt.clouddn.com/run2code.mp4" type="video/mp4"></source>
+						</video>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -293,17 +310,7 @@ turtle.done()
 	<section id="contact-half" class="bg-color1 cover-bg" style="background-image: url(images/bg-map.jpg);">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 dark-bg">
-					<h2 class="title">联系我们</h2>
-					<p class="sep-bottom">如果您对课程有任何疑问或者建议，恳请您与我们联系，我们将尽快给您回复。</p>
-					<ul class="data-list">
-						<li><i class="icon icon-call-in"></i> 电话：175-7605-0932(闰土编程)、156-2647-0703(潘老师)</li>
-						<li><i class="icon icon-mobile"></i> 微信：175-7605-0932(闰土编程)</li>
-						<li><i class="icon icon-envelope-open"></i> 邮箱：115159694@qq.com</li>
-						<li><i class="icon icon-pointer"></i> 地址：广州市天河区天河南二路29号华兴阁2804室（石牌桥地铁站B出口处，太古汇对面）</li>
-					</ul>
-				</div>
-				<div class="col-md-5 col-md-offset-1">
+				<div class="col-md-5">
 					<div class="form-container">
 						<h3 class="title">留言</h3>
 						<form action="" role="form" id="contact_form" novalidate>
@@ -332,6 +339,16 @@ turtle.done()
 							<button type="submit" id="apply_submit" data-loading-text="•••" class="btn btn-lg btn-block btn-primary"><i class="icon icon-paper-plane"></i>发送</button>
 						</form>
 					</div>
+				</div>
+				<div class="col-md-6 dark-bg col-md-offset-1">
+					<h2 class="title">联系我们</h2>
+					<p class="sep-bottom">如果您对课程有任何疑问或者建议，恳请您与我们联系，我们将尽快给您回复。</p>
+					<ul class="data-list">
+						<li><i class="icon icon-call-in"></i> 电话：175-7605-0932(闰土编程)、156-2647-0703(潘老师)</li>
+						<li><i class="icon icon-mobile"></i> 微信：175-7605-0932(闰土编程)</li>
+						<li><i class="icon icon-envelope-open"></i> 邮箱：115159694@qq.com</li>
+						<li><i class="icon icon-pointer"></i> 地址：广州市天河区天河南二路29号华兴阁2804室（石牌桥地铁站B出口处，太古汇对面）</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -375,11 +392,10 @@ turtle.done()
 <script src="http://p4uq8ym5z.bkt.clouddn.com/jquery.magnific-popup.min.js"></script> 
 <script src="http://p4uq8ym5z.bkt.clouddn.com/jquery.counterup.min.js"></script> 
 <script src="http://p4uq8ym5z.bkt.clouddn.com/waypoints.min.js"></script> 
-<script src="http://p4uq8ym5z.bkt.clouddn.com/video.js"></script> 
-<script src="http://p4uq8ym5z.bkt.clouddn.com/bigvideo.js"></script> 
 <script src="http://p4uq8ym5z.bkt.clouddn.com/notifIt.min.js"></script>
 <script src="http://p4uq8ym5z.bkt.clouddn.com/skulpt.min.js"></script>
 <script src="http://p4uq8ym5z.bkt.clouddn.com/skulpt-stdlib.js"></script>
+<script src="http://p4uq8ym5z.bkt.clouddn.com/video.min.js"></script>
 <script src="lib/custom.js"></script>
 
 <!-- Custom -->
