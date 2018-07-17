@@ -28,3 +28,16 @@ exports.coding = function(req, res) {
 exports.apply = function(req, res) {
     res.sendFile(config.APP_PATH + '/apply.html')
 }
+
+// 项目
+exports.draw = function(req, res) {
+    res.sendFile(config.APP_PATH + '/projects/draw/index.html')
+}
+
+exports.snake = function(req, res) {
+    res.sendFile(config.APP_PATH + '/projects/snake/index.html')
+}
+
+exports.firework = function(req, res) {
+    res.sendFile(config.APP_PATH + '/projects/firework/index.html')
+}

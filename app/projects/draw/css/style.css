@@ -1,0 +1,74 @@
+/**
+ * 样式
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: url(../images/bg.jpg);
+	color: #333;
+}
+
+canvas {
+	background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+}
+
+.tips {
+	width: 960px;
+	margin: 15px auto;
+	padding: 10px 0;
+	background: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888;
+    background-color: #f5f5f5;
+}
+
+button {
+	padding: 5px 10px;
+	margin: 0 5px;
+	border: none;
+	background-color: #8d9c0d33;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.color {
+	display: inline-block;
+}
+
+.color button {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+.color button.active, .color button:hover {
+	transform: scale(1.2);
+}
+
+#black {
+	background-color: black;
+}
+
+#yellow {
+	background-color: yellow;
+}
+
+#red {
+	background-color: red;
+}
+
+#blue {
+	background-color: blue;
+}
+
+.pencil {
+	display: inline-block;
+}
+
+#cuxi {
+	vertical-align: middle;
+}

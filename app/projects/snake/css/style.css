@@ -1,0 +1,15 @@
+/**
+ * 样式
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: url(../images/bg.jpg);
+	color: #333;
+}
+
+canvas {
+	background-color: #000;
+}
