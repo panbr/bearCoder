@@ -1,0 +1,19 @@
+/**
+ * 样式
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: #F7FBFC;
+	color: #333;
+}
+
+canvas {
+	background-color: #fff;
+	background-image: url(http://pcqo8f331.bkt.clouddn.com/scene.jpg);
+	background-size: 960px 600px;
+	border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+}

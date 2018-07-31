@@ -13,9 +13,6 @@ router.get('/map', url.map)
 router.get('/applyList', url.applyList)
 router.get('/coding', url.coding)
 router.get('/apply', url.apply)
-router.get('/projects/draw', url.draw)
-router.get('/projects/snake', url.snake)
-router.get('/projects/firework', url.firework)
 
 /// API
 router.get('/api/schoolList', api.schoolList)

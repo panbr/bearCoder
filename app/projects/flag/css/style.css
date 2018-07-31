@@ -1,0 +1,30 @@
+/**
+ * 样式
+ */
+
+
+ html, body {
+  	margin: 0;
+  	padding: 0;
+  	height: 100%;
+  	overflow: hidden;
+  }
+
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ 	text-align: center;
+    background: #E7E7F2;
+ 	/* background: url(../images/bg_flag.jpg) no-repeat #F7FBFC;
+ 	background-size: cover; */
+ 	color: #333;
+ }
+
+#canvas {
+	background: url(http://pcqo8f331.bkt.clouddn.com/screen.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+	opacity: 0.8;
+}

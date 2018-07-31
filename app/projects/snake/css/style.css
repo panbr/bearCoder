@@ -2,14 +2,29 @@
  * 样式
  */
 
-body {
+html, body {
 	margin: 0;
 	padding: 0;
-	text-align: center;
-	background: url(http://ocz1xi4bl.bkt.clouddn.com/bg.jpg);
-	color: #333;
+	height: 100%;
+	overflow: auto;
 }
 
-canvas {
-	background-color: #000;
+body {
+	text-align: center;
+	background: url(http://pcqo8f331.bkt.clouddn.com/bg_snake.jpg) no-repeat #E7E7F2;
+	background-size: cover;
+	color: #fff;
+}
+
+canvas, p {
+	background-color: #87e3fd;
+	border-radius: 10px;
+	opacity: 0.75;
+}
+
+p {
+	margin: 15px auto;
+	width: 960px;
+	padding: 10px 0;
+	color: #333;
 }

@@ -33,17 +33,17 @@ class Snake {
 	constructor() {
 		// 存放组成蛇的方块对象
         this.snakeArray = [];
-        
+
         // 画出4个方块组成蛇身，设置成灰色
         for(var i = 0; i < 4; i++) {
             var rect = new Rect(i*20, 0, 20, 20, "gray");
             this.snakeArray.splice(0, 0, rect); // 保证蛇头出现在数组第一个位置
         }
-        
+
         // 把数组第一个作为蛇头，蛇头设成红色
         this.head = this.snakeArray[0]; // 蛇头
         this.head.color = "red";
-        
+
         // 给定初始位置向右(右箭头39)
         this.direction = 39;
 	}
@@ -80,7 +80,7 @@ class Snake {
             case 40: // 下
                 this.head.y += this.head.h;
                 break;
-            default:    
+            default:
                 break;
         }
 
@@ -168,9 +168,9 @@ function runTime() {
 
 // 构建食物对象
 function getRandomFood() {
-    
+
     var isOnSnake = true; // 判定食物是否出现在蛇身上
-    
+
     // 设置食物出现的随机位置
     while(isOnSnake){
         isOnSnake = false; // 执行后先将判定条件设置为false
@@ -214,7 +214,7 @@ function record(snake) {
 // 游戏结束
 function gameOver(snake) {
 	var record = snake.snakeArray.length-4;
-	ctx.font="46px Arial";
+	ctx.font = "46px Arial";
 	ctx.fillText("游戏结束！分数：" + record, canvas.width/2-200, canvas.height/2-30);
 }
 
@@ -229,4 +229,3 @@ function pause() {
 		timeFlag = true;
 	}
 }
-

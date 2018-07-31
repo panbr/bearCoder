@@ -2,11 +2,17 @@
  * 样式
  */
 
+html, body {
+ 	margin: 0;
+ 	padding: 0;
+ 	height: 100%;
+ 	overflow: auto;
+ }
+
 body {
-	margin: 0;
-	padding: 0;
 	text-align: center;
-	background: url(http://ocz1xi4bl.bkt.clouddn.com/bg.jpg);
+	background: url(http://pcqo8f331.bkt.clouddn.com/bg_draw.jpg) no-repeat #E7E7F2;
+	background-size: cover;
 	color: #333;
 }
 

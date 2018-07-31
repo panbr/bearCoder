@@ -1,0 +1,16 @@
+/**
+ * 样式
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background: #E7E7F2;
+	color: #333;
+	overflow: hidden;
+}
+
+canvas {
+	background: #000;
+}

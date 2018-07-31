@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+canvas {
+  /*Need to be written to avoid issue with inneHeight in IOS with codepen*/
+  position: absolute;
+  
+  background: #212944;
+  /* Old browsers */
+  
+  background: -moz-radial-gradient(center, ellipse cover, #212944 0%, #141f44 33%, #02001e 100%);
+  /* FF3.6+ */
+  
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #212944), color-stop(33%, #141f44), color-stop(100%, #02001e));
+  /* Chrome,Safari4+ */
+  
+  background: -webkit-radial-gradient(center, ellipse cover, #212944 0%, #141f44 33%, #02001e 100%);
+  /* Chrome10+,Safari5.1+ */
+  
+  background: -o-radial-gradient(center, ellipse cover, #212944 0%, #141f44 33%, #02001e 100%);
+  /* Opera 12+ */
+  
+  background: -ms-radial-gradient(center, ellipse cover, #212944 0%, #141f44 33%, #02001e 100%);
+  /* IE10+ */
+  
+  background: radial-gradient(ellipse at center, #212944 0%, #141f44 33%, #02001e 100%);
+  /* W3C */
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#212944', endColorstr='#02001e', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}

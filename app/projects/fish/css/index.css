@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background: url(../images/bg_fish.jpg) no-repeat #E7E7F2;
+    background-size: cover;
+    color: #333;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tip {
+    width: 300px;
+    color: #333;
+    margin-left: 35px;
+    padding: 0 15px;
+    background-color: #aaadce;
+    text-align: justify;
+}
+
+.tip, canvas {
+    border-radius: 10px;
+    opacity: 0.75;
+}
+
+.hd {
+    border-left: 8px solid red;
+    padding-left: 8px;
+}
+
+.con {
+    line-height: 2em;
+}
+
+#main {
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+#canvas1, #canvas2 {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#canvas1 {
+    z-index: 1;
+}
+
+#canvas2 {
+    z-index: 0;
+}

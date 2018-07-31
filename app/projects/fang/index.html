@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>俄罗斯方块</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <h3>俄罗斯方块游戏</h3>
+    <div class="container">
+        <canvas width='480' height='620'></canvas>
+        <div class="tip">
+            <h4 class="hd">分数</h4>
+            <div id="score">0</div>
+            <h4 class="hd">操作说明</h4>
+            <div class="con">'左'、'右' 移动，'上' 旋转方块，'下' 加速下落。</div>
+            <h4 class="hd">游戏目标</h4>
+            <div class="con">消除方块，取得高分。</div>
+        </div>
+    </div>
+
+    <script src='./js/tetris.js'></script>
+    <script src='./js/controller.js'></script>
+    <script src='./js/render.js'></script>
+</body>
+</html>
